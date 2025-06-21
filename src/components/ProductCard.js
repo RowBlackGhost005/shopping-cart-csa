@@ -3,7 +3,7 @@ import React from 'react';
 import './ProductCard.css'
 
 export default function ProductCard({ product }) {
-  const { name, price, image } = product
+  const { name, price, image } = product;
 
   return (
     <div className="product-card">
