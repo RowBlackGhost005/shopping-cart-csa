@@ -1,11 +1,9 @@
-import { http } from 'msw'
+import { http , HttpResponse } from 'msw'
 
 export const handlers = [
     //Mock Endpoint for fetching products
-    http.get('/api/products' , (req , res, ctx) => {
-        return res (
-            ctx.status(200),
-            ctx.json([
+    http.get('/api/products' , () => {
+        return HttpResponse.json([
                 {   id: 1 , 
                     name: 'Airpod Max' , 
                     price: 350.00 , 
@@ -45,11 +43,11 @@ export const handlers = [
                 {   id: 10 , 
                     name: 'Sony Wired Headphones' , 
                     price: 66.50 , 
-                    image: '/images/sony-wired-headphones'},
+                    image: '/images/sony-wired-headphones.jpg'},
                 {   id: 11 , 
                     name: 'Sony Wireless' , 
                     price: 30.50 , 
-                    image: '/images/sony-wireless-headphones'},
+                    image: '/images/sony-wireless-headphones.jpg'},
                 {   id: 12 , 
                     name: 'Soundcore Anker Headphones' , 
                     price: 55.99 , 
@@ -61,8 +59,7 @@ export const handlers = [
                 {   id: 14 , 
                     name: 'Soundcore Q20 Headphones' , 
                     price: 37.00 , 
-                    image: '/images/soundcore-headphones'},
-            ])
-        )
+                    image: '/images/soundcore-headphones.jpg'},
+        ])
     })
 ]
