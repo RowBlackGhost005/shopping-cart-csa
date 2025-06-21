@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {CartProvider} from './context/CartContext';
+
 // Only start MSW in development
 if (process.env.NODE_ENV === 'development') {
   const { worker } = await import('./mocks/browser')
@@ -13,7 +15,9 @@ if (process.env.NODE_ENV === 'development') {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </React.StrictMode>
 );
 
