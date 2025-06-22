@@ -2,7 +2,7 @@
 
 Small App developed in react that integrates with an API to show Products, add to the cart and simulates a checkout.
 
-Try it out: [https://shopping-cart-nobmrn65u-rowblackghost005s-projects.vercel.app/](https://shopping-cart-csa.vercel.app/)
+Try it out: https://shopping-cart-csa.vercel.app/
 
 # Features
 * Products Listing Page.
