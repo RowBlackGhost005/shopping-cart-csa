@@ -7,11 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import {CartProvider} from './context/CartContext';
 
 // Only start MSW in development
-if (process.env.NODE_ENV === 'development' || process.env.REACT_APP_ENABLE_MSW === 'true') {
-  const { worker } = require('./mocks/browser');
-  worker.start();
-}
+const enableMocking = async () => {
+  if (process.env.REACT_APP_ENABLE_MSW === 'true') {
+    const { worker } = await import('./mocks/browser');
+    await worker.start();
+  }
+};
 
+enableMocking.then(() => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -20,6 +23,9 @@ root.render(
     </CartProvider>
   </React.StrictMode>
 );
+})
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
