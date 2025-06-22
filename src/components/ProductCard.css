@@ -16,6 +16,8 @@
   height: auto;
   object-fit: contain;
   margin-bottom: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .product-name {

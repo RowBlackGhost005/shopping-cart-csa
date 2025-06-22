@@ -26,7 +26,8 @@ function CheckoutPage(){
         return (
             <div style={{ textAlign: 'center', padding: '2rem' }}>
             <h2>Order Placed!</h2>
-            <p>{`Thank you ${form.name}. <br/> A confirmation has been sent to ${form.email}.`}</p>
+            <p>{`Thank you ${form.name}.`}</p>
+            <p>{`A confirmation has been sent to ${form.email}.`}</p>
             </div>
         );
     }
