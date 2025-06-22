@@ -1,7 +1,7 @@
 import React , { useState , useEffect } from 'react';
 
-import ProductCard from './ProductCard';
-import './ProductListing.css'
+import ProductCard from '../components/ProductCard';
+import './ProductListingsPage.css'
 
 function ProductListing() {
 
