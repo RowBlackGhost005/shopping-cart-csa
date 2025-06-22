@@ -7,9 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import {CartProvider} from './context/CartContext';
 
 // Only start MSW in development
-if (process.env.NODE_ENV === 'development') {
-  const { worker } = await import('./mocks/browser')
-  await worker.start()
+if (process.env.NODE_ENV === 'development' || process.env.REACT_APP_ENABLE_MSW === 'true') {
+  const { worker } = require('./mocks/browser');
+  worker.start();
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
