@@ -1,0 +1,13 @@
+.cart-page {
+  padding: 2rem;
+}
+
+.cart-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cart-empty {
+  text-align: center;
+  font-style: italic;
+}

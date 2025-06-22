@@ -21,6 +21,23 @@ export const CartProvider = ({children}) => {
         })
     }
 
+    const subFromCart = (product) => {
+        if(product.quantity === 1){
+            removeFromCart(product.id);
+            return;
+        }
+
+        setCartItems((prev) => {
+            const alreadyInCart = prev.find((item) => item.id === product.id);
+
+            if(alreadyInCart){
+                return prev.map((item) => 
+                    item.id === product.id ? {...item , quantity: item.quantity -1 } : item
+                )
+            }
+        })
+    }
+
     const removeFromCart = (productId) => {
         setCartItems((prev) => prev.filter((item) => item.id !== productId));
     }
@@ -35,7 +52,8 @@ export const CartProvider = ({children}) => {
                 cartItems,
                 addToCart,
                 removeFromCart,
-                clearCart
+                clearCart,
+                subFromCart
             }}>
             {children}
         </CartContext.Provider>
