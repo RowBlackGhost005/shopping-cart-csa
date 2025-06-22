@@ -3,8 +3,6 @@ import React , { useState , useEffect } from 'react';
 import ProductCard from './ProductCard';
 import './ProductListing.css'
 
-import CartPage from './CartPage';
-
 function ProductListing() {
 
     const [products, setProducts] = useState([]);
