@@ -11,3 +11,40 @@
   text-align: center;
   font-style: italic;
 }
+
+.cart-total {
+  text-align: center;
+
+}
+
+.cart-total-amount {
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(19, 128, 19);
+}
+
+.cart-total-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-total-container > p {
+  margin: 0;
+}
+
+.checkout-button {
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.checkout-button:hover {
+  background-color: #3e8e41;
+}
